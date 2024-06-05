@@ -1,31 +1,19 @@
 class loginObjects {
     elements = {
-        userInput: ()=> cy.get('[form=""] > .form-control'),
-        passInput: ()=> cy.get('.pos-r > .form-control'),
-        loginBtn: ()=> cy.get('.card-footer > .btn'),
-        clientInput: ()=> cy.get('#namanyay-search-box'),
-        clientBtn: ()=> cy.get('#namanyay-search-btn')
-    }
+        userInput: '//input[contains(@formcontrolname,"user")]',
+        passInput: '//input[contains(@formcontrolname,"pass")]',
+        loginBtn: '//button[@type="submit"]',
+        clientInput: '//input[@id="namanyay-search-box"]',
+        clientBtn: '//button[@id="namanyay-search-btn"]',
+        campSms: '//a[@class="ng-star-inserted"][contains(.,"Campaña SMS")]',
+        one: '//a[@class="ng-star-inserted"][contains(.,"One")]',
+        sucur: '//a[@class="ng-star-inserted"][contains(.,"Sucursales")]',
+        nvaConsulta: '//a[contains(.,"Nueva consulta")]',
+        anulaSol: '//a[contains(.,"Anula solicitudes")]',
+        solHist: '//a[contains(.,"Solicitud histórica")]',
+        mantRoadmap: '//a[contains(.,"Mantenedor Roadmap")]',  
 
-    valUsr() {
-        this.elements.userInput().should("be.visible")
+        
     }
-
-    valPass() {
-        this.elements.passInput().should("be.visible")
-    }
-
-    valSbmBtn() {
-        this.elements.loginBtn().should("be.visible")
-    }
-
-    valClient() {
-        this.elements.clientInput.should("be.visible")
-    }
-
-    valClientBtn() {
-        this.elements.clientBtn.should("be.visible")
-    }
-}
-
+}   
 export const newLoginObjects = new loginObjects;
