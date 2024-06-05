@@ -1,24 +1,23 @@
-require('@cypress/xpath')
 class loginPage {
     
     // objetos propios de la pagina
     elements = {
-        userInput: ()=> cy.xpath('//input[contains(@formcontrolname,"user")]'),
-        passInput: ()=> cy.xpath('//input[contains(@formcontrolname,"pass")]'),
-        loginBtn: ()=> cy.xpath('//button[@type="submit"]'),
+        userInput: ()=> cy.get('[form=""] > .form-control'),
+        passInput: ()=> cy.get('.pos-r > .form-control'),
+        loginBtn: ()=> cy.get('.card-footer > .btn'),
         clientInput: ()=> cy.get('#namanyay-search-box'),
         clientBtn: ()=> cy.get('#namanyay-search-btn')
     }
 
     // acciones sobre los objetos
     enterUsr(type) {
-        this.elements.userInput().should("be.visible").type(type)
+        this.elements.userInput().type(type)
     }
     enterPass(type) {
-        this.elements.passInput().should("be.visible").type(type)
+        this.elements.passInput().type(type)
     }
     submitLogin() {
-        this.elements.loginBtn().should("be.visible").click()
+        this.elements.loginBtn().click()
     }
     enterClient(type) {
         this.elements.clientInput().type(type)
