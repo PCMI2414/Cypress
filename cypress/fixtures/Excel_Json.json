@@ -1,0 +1,26 @@
+[
+    {
+        "nombrepaso": "ra",
+        "usuario": "usuario001",
+        "pass1": "qa111111",
+        "pass2": "qa111111"
+    },
+    {
+        "nombrepaso": "ra",
+        "usuario": "usuario002",
+        "pass1": "qa222222",
+        "pass2": "qa222222"
+    },
+    {
+        "nombrepaso": "ra",
+        "usuario": "usuario003",
+        "pass1": "qa333333",
+        "pass2": "qa333333"
+    },
+    {
+        "nombrepaso": "ra",
+        "usuario": "usuario004",
+        "pass1": "qa444444",
+        "pass2": "qa444444"
+    }
+]
